@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Number进阶
+    var num = 11.26;
+    var numobj = new Number(num);
+    numobj.toPrecision(2);
+    console.log(numobj);
+
+
+
+
+
+    //String进阶
+    var str = "            a        *b*c*d*e    " ;
+    var strobj = new String(str);
+    console.log(strobj.charAt(2));
+    //charAt(index)返回特定索引位置字符
+
+    console.log(strobj.charCodeAt(0));
+    //返回特定索引位置字符的Unicode码
+
+    console.log(strobj.slice(0,2));
+    //slice(截取起始位置，截取的结束位置)
+
+    console.log(strobj.substr(0,3));
+    //substr(截取字符串的起始位置，截取字符串的长度)
+
+    console.log(strobj.substring(0,2));
+    //substring(截取字符串的起始位置，截取字符串的结束位置)
+    //起始值>结束值 互换位置
+    //如果有超出索引位置 0 - str.length-1 自动截取
+
+    console.log(strobj.split("*"));
+    //split（特定的字符，限定元素个数-可选）将字符串以特定的字符分割，将字符串作为数组元素生成数组
+
+    console.log(strobj.trim());
+    //trim()去除字符串两边的空白字符，字符串内部的空白不能去除
+
+    var str1 = "hello,";
+    console.log(str1.concat("world"));
+
+
+
+
+
+    //number stirng boolean
+    //Number()  String()  Boolean()
+    var num1 = 20;
+    console.log(num1.__proto__);
+    console.log(Number.prototype);
+    //基本数据类型，实际的变量的__proto__和构造函数的prototype是完全相等的
+
+</script>
+</html>

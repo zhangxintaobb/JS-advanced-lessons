@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var num1 = 20;
+    var num2 = num1;
+    num1 = 10;
+    //string number boolean//值类型存储方式，存储在栈区;
+
+
+
+    //浅拷贝
+    var object1 = {"username":"zhangsan"};
+    var object2 = object1;
+    object2.username = "lisa";
+    console.log(object1);
+    //对象的引用存储在栈区，实际的对象存储在堆区，类似指针，通过引用指向对象；
+    //object1,object2指向同一对象。
+
+
+    var arr1 = [1,2,3,4];
+    var arr2 = arr1;
+    arr2[2] = 2;
+    console.log(arr1);
+
+
+
+    //判等
+    var object3 = {};
+    var object4 = {};
+    console.log(object3 == object4);
+
+    var num3 = 10;
+    var num4 = 10;
+    console.log(num3 == num4);
+
+
+    console.log(typeof arr1);
+
+    //infinity:无穷大
+    //-infinity：负无穷大
+
+
+    var str = "abcdef";
+    console.log(str.slice(0,2));
+
+
+    //split(分隔符,生成数组的元素个数)
+    //将字符串以特定分隔符分割，生成数组
+    var str1 = "ab_cd_ef";
+    str1 =  str1.split("_");
+    console.log(str1);
+    
+
+
+
+    var str2= new String("abcdef");
+    var str3 = "abcdef";
+    
+
+    var str4 = "abcedf";
+    str4.substr(0,2);
+    //内部实现（装箱操作）
+    //基本数据类型，在操作过程中，会有自动装箱过程
+    //生成临时对象，临时对象在使用完后会自动释放
+    var str4 = "abcdef";
+    var strObject = new String(str4);//临时的，用完会立刻释放
+    strObject.substr(0,2); 
+
+    var num = 10;
+    num.toString();
+
+    var num = 10;
+    var numobject = new Number(num);
+    numobject.toString();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
